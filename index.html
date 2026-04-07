@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RE-CON SYSTEM</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(135deg, #1a1f2b, #0f1218);
+  color: #fff;
+}
+
+/* ===== ガラスバナー ===== */
+.glass-banner {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 30px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.4);
+
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* 左（キャラ） */
+.glass-left img {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 右（文字） */
+.glass-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass-content {
+  text-align: center;
+}
+
+/* タイトル */
+.glass-content h1 {
+  font-size: 36px;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+
+  text-shadow: 0 0 12px rgba(255,255,255,0.3);
+}
+
+/* サブ */
+.glass-content p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 1px;
+}
+
+/* モバイル */
+@media (max-width: 600px) {
+  .glass-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .glass-left img {
+    width: 140px;
+  }
+
+  .glass-content h1 {
+    font-size: 26px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="glass-banner">
+  
+  <div class="glass-left">
+    <img src="https://via.placeholder.com/200x300" alt="character">
+  </div>
+
+  <div class="glass-right">
+    <div class="glass-content">
+      <h1>RE-CON SYSTEM</h1>
+      <p>司令システム構築中</p>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
 
