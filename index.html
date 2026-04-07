@@ -4,22 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ReCON_SYSTEM</title>
+<title>RE-CON SYSTEM</title>
 
 <style>
 
+/* ===== ベース ===== */
 body {
   margin: 0;
-  background: linear-gradient(135deg, #0f1218, #1a1f2b);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-family: sans-serif;
+
+  background: linear-gradient(135deg, #0f1218, #1a1f2b);
 }
+
 
 /* ===== バナー本体 ===== */
 .glass-banner {
   position: relative;
 
+  width: 90%;
   max-width: 900px;
-  margin: 80px auto;
+
   padding: 60px 40px;
   border-radius: 20px;
 
@@ -34,7 +43,8 @@ body {
   box-shadow: 0 8px 32px rgba(0,0,0,0.4);
 }
 
-/* ===== 背景キャラ（ここが本体） ===== */
+
+/* ===== 背景キャラ ===== */
 .glass-banner::before {
   content: "";
   position: absolute;
@@ -43,11 +53,12 @@ body {
   background: url("img/yate.png") no-repeat left center;
   background-size: contain;
 
-  opacity: 0.18;   /* ←ここが“薄さ” */
+  opacity: 0.18; /* ←薄さ調整 */
   pointer-events: none;
 }
 
-/* ===== 暗めフィルター（文字見やすく） ===== */
+
+/* ===== 暗めフィルター ===== */
 .glass-banner::after {
   content: "";
   position: absolute;
@@ -62,18 +73,12 @@ body {
   pointer-events: none;
 }
 
-/* ===== 文字エリア ===== */
-.glass-right {
+
+/* ===== テキスト ===== */
+.glass-content {
   position: relative;
   z-index: 1;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* ===== 中央テキスト ===== */
-.glass-content {
   text-align: center;
   color: #fff;
 }
@@ -94,22 +99,28 @@ body {
 }
 
 
+/* ===== モバイル ===== */
+@media (max-width: 600px) {
+  .glass-banner {
+    padding: 40px 20px;
+  }
+
+  .glass-content h1 {
+    font-size: 22px;
+  }
+}
+
+</style>
 </head>
 
 <body>
 
 <div class="glass-banner">
-
-  <div class="glass-right">
-    <div class="glass-content">
-      <h1>RE-CON SYSTEM</h1>
-      <p>司令システム構築中</p>
-    </div>
+  <div class="glass-content">
+    <h1>RE-CON SYSTEM</h1>
+    <p>司令システム構築中</p>
   </div>
-
 </div>
-
 
 </body>
 </html>
-
